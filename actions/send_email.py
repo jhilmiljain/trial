@@ -4,7 +4,7 @@ from smtplib import SMTP
 from email.header import Header
 
 class SendEmail(Action):
-    def run(self, email_from, email_to, subject, messag)
+    def run(self, email_from, email_to, subject, message)
         s = SMTP(account_data['server'], int(account_data['port']), timeout=20)
         s.ehlo()
         if account_data.get('secure', True) is True:
