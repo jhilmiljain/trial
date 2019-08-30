@@ -1,6 +1,6 @@
 ---
 name: Sample
-description: "Rule which sends an email when an email from johndoe@gmail.com is received"
+description: "Rule which sends an email when an email from jhilmiljain@gmail.com is received"
 pack: email
 enabled: false
 trigger:
@@ -8,12 +8,12 @@ trigger:
   parameters: {}
 criteria:
   trigger.from:
-    pattern: johndoe@gmail.com
+    pattern: jhilmiljain@gmail.com
     type: contains
 action:
   ref: core.sendmail
   parameters:
     body: 'We received an email'
-    to: janedoe@gmail.com
+    to: jhilmiljain@gmail.com
     from: stackstorm@yourcompanyname.com
     subject: 'Email Received'
