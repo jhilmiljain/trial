@@ -84,6 +84,7 @@ class St2SMTPServer(smtpd.SMTPServer):  # pylint: disable=no-member
         return
 
     def parse_message(self, mailfrom, rcpttos, data):
+        message = mime.from_string(data)
         headers = message.headers.items()
         headers = self._flattern_headers(headers=headers)
         payload = {
@@ -93,6 +94,7 @@ class St2SMTPServer(smtpd.SMTPServer):  # pylint: disable=no-member
             'date': None,
             'body_plain': None,
             'body_html': None,
+            'attachments': [],
             'headers': headers,
         }
 
@@ -127,4 +129,15 @@ class St2SMTPServer(smtpd.SMTPServer):  # pylint: disable=no-member
                     payload['body_plain'] = part.body
                 elif content_type == 'text/html':
                     payload['body_html'] = part.body
+                elif part.is_attachment():
+                    attachment = {
+                        'filename': part.detected_file_name,
+                        'md5': hashlib.md5(part.body).hexdigest(),
+                        'sha1': hashlib.sha1(part.body).hexdigest(),
+                        'data': base64.b64encode(part.body),
+                        'encoding': part.content_encoding[0],
+                        'type': content_type,
+                    }
+                    payload['attachments'].append(attachment)
+
         return payload
