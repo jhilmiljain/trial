@@ -1,8 +1,8 @@
 ---
 ref: email
 name: email
-description: E-Mail Actions/Sensors for StackStorm
-keywords:
+description: Simple pack containing examples of sensor, rule, and action.
+keywords: 
   - email
   - messaging
 version: 1.1.3
