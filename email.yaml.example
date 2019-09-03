@@ -1,13 +1,13 @@
 ---
 smtp_accounts:
-  - name: me
+  - name: jhilmil
     password: "super_S3c4e3t!"
     port: 465
     secure: true
     server: "smtp.example.com"
     smtp_auth: true
     username: "jhilmil123jain@gmail.com"
-  - name: you
+  - name: jhilmiljain
     password: "topsecret!"
     port: 587
     secure: true
