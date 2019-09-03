@@ -1,5 +1,6 @@
 ---
   name: "send_email"
+  ref: trial
   runner_type: "python-script"
   description: "Send an email."
   enabled: true
