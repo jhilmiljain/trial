@@ -6,14 +6,14 @@ smtp_accounts:
     secure: true
     server: "smtp.example.com"
     smtp_auth: true
-    username: "jhilmiljain821@gmail.com"
+    username: "jhilmil123jain@gmail.com"
   - name: you
     password: "topsecret!"
     port: 587
     secure: true
     server: "smtp.example.com"
     smtp_auth: true
-    username: "jhilmil123jain@gmail.com"
+    username: "jhilmiljain821@gmail.com"
 max_attachment_size: 1024
 attachment_datastore_ttl: 1800
 sensor_smtp_listen_ip: '127.0.0.1'
