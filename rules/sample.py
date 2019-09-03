@@ -1,16 +1,16 @@
 ---
 name: Sample
 description: "Rule which sends an email when an email from jhilmiljain@gmail.com is received"
-pack: email
+pack: trial
 enabled: false
 criteria:
   trigger.from:
-    pattern: jhilmiljain@gmail.com
+    pattern: jhilmil123jain@gmail.com
     type: contains
 action:
   ref: core.sendmail
   parameters:
     body: 'We received an email'
-    to: jhilmiljain@gmail.com
-    from: stackstorm@yourcompanyname.com
+    to: jhilmiljain821@gmail.com
+    from: jhilmil123jain@gmail.com
     subject: 'Email Received'
