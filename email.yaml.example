@@ -7,7 +7,7 @@ smtp_accounts:
     server: "smtp.example.com"
     smtp_auth: true
     username: "jhilmil123jain@gmail.com"
-  - name: jhilmiljain
+  - name: jhilmil
     password: "topsecret!"
     port: 587
     secure: true
