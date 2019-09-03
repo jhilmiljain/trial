@@ -1,7 +1,7 @@
 ---
 name: Sample
 description: "Rule which sends an email when an email from jhilmiljain@gmail.com is received"
-pack: email1
+pack: trial
 enabled: false
 criteria:
   trigger.from:
