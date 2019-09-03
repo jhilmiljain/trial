@@ -1,6 +1,6 @@
 ---
 ref: send_email
-name: trial
+name: trial123
 description: Simple pack containing examples of sensor, rule, and action.
 keywords: 
   - email
